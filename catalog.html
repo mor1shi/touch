@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог — TOUCH</title>
+  <meta name="description" content="Каталог TOUCH: толстовки, брюки и аксессуары новой коллекции 2026. Найдите вещь со своим характером.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="index.html" aria-label="TOUCH, главная страница"><img src="img/logo-touch.png" alt="TOUCH"></a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html" aria-current="page">Каталог</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <nav class="utility-nav" aria-label="Сервисы">
+        <a class="utility-link" href="#cart-note" aria-label="Корзина"><span class="utility-icon utility-icon--bag"></span></a>
+        <a class="utility-link" href="catalog.html" aria-label="Избранное"><span class="utility-icon utility-icon--heart"></span></a>
+        <a class="utility-link" href="contacts.html" aria-label="Профиль"><span class="utility-icon utility-icon--person"></span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="section-shell">
+      <div class="page-heading">
+        <h1>Фильтрация</h1>
+        <p>Выберите вещь, которая будет говорить за вас. Восемь характеров из новой коллекции.</p>
+      </div>
+
+      <form class="catalog-tools" action="catalog.html" method="get">
+        <div class="search-line">
+          <label for="search" class="visually-hidden">Поиск по каталогу</label>
+          <input id="search" type="search" name="search" placeholder="Поиск">
+          <button type="submit">Найти</button>
+        </div>
+        <div class="filter-line">
+          <div class="filter-field">
+            <label for="price">Цена</label>
+            <select id="price" name="price">
+              <option value="">По умолчанию</option>
+              <option value="low">Сначала дешевле</option>
+              <option value="high">Сначала дороже</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="color">Цвет</label>
+            <select id="color" name="color">
+              <option value="">Все цвета</option>
+              <option value="navy">Синий</option>
+              <option value="cream">Молочный</option>
+              <option value="black">Чёрный</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="gender">Пол</label>
+            <select id="gender" name="gender">
+              <option value="">Для всех</option>
+              <option value="unisex">Унисекс</option>
+              <option value="women">Женское</option>
+              <option value="men">Мужское</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="season">Сезон</label>
+            <select id="season" name="season">
+              <option value="">Все сезоны</option>
+              <option value="spring">Весна-лето</option>
+              <option value="autumn">Осень-зима</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="sort">Сортировка</label>
+            <select id="sort" name="sort">
+              <option value="new">Сначала новые</option>
+              <option value="popular">Популярные</option>
+            </select>
+          </div>
+        </div>
+      </form>
+
+      <div class="catalog-count">
+        <span>Коллекция 2026</span>
+        <span>08 позиций</span>
+      </div>
+
+      <section class="product-grid" aria-label="Товары каталога">
+        <article class="product-card">
+          <a href="card.html"><img class="product-card__image" src="img/product-1.png" alt="Кожаная сумка TOUCH"></a>
+          <div class="product-card__body">
+            <h2>Сумка кожаная</h2>
+            <p>Геометричная форма и удобный короткий ремень.</p>
+            <div class="product-card__bottom"><span class="product-card__price">2 000 ₽</span><a class="product-card__link" href="card.html">Ссылка</a></div>
+          </div>
+        </article>
+        <article class="product-card">
+          <a href="card.html"><img class="product-card__image" src="img/product-2.png" alt="Белые брюки TOUCH"></a>
+          <div class="product-card__body">
+            <h2>Белые брюки</h2>
+            <p>Свободный крой и чистая линия на каждый день.</p>
+            <div class="product-card__bottom"><span class="product-card__price">3 000 ₽</span><a class="product-card__link" href="card.html">Ссылка</a></div>
+          </div>
+        </article>
+        <article class="product-card">
+          <a href="card.html"><img class="product-card__image" src="img/product-3.png" alt="Чёрно-белая кофта TOUCH"></a>
+          <div class="product-card__body">
+            <h2>Чёрно-белая кофта</h2>
+            <p>Контрастная база с мягкой посадкой.</p>
+            <div class="product-card__bottom"><span class="product-card__price">4 000 ₽</span><a class="product-card__link" href="card.html">Ссылка</a></div>
+          </div>
+        </article>
+        <article class="product-card">
+          <a href="card.html"><img class="product-card__image" src="img/product-4.png" alt="Коричневые камуфляжные брюки TOUCH"></a>
+          <div class="product-card__body">
+            <h2>Камуфляжные брюки</h2>
+            <p>Тёплый оттенок, утилитарные карманы, свой ритм.</p>
+            <div class="product-card__bottom"><span class="product-card__price">5 000 ₽</span><a class="product-card__link" href="card.html">Ссылка</a></div>
+          </div>
+        </article>
+        <article class="product-card">
+          <a href="card.html"><img class="product-card__image" src="img/product-5.png" alt="Бежевые брюки TOUCH"></a>
+          <div class="product-card__body">
+            <h2>Бежевые брюки</h2>
+            <p>Спокойный цвет и объём для длинных прогулок.</p>
+            <div class="product-card__bottom"><span class="product-card__price">1 000 ₽</span><a class="product-card__link" href="card.html">Ссылка</a></div>
+          </div>
+        </article>
+        <article class="product-card">
+          <a href="card.html"><img class="product-card__image" src="img/product-6.png" alt="Чёрные брюки TOUCH"></a>
+          <div class="product-card__body">
+            <h2>Чёрные брюки</h2>
+            <p>Глубокий чёрный и точная посадка без лишнего.</p>
+            <div class="product-card__bottom"><span class="product-card__price">23 000 ₽</span><a class="product-card__link" href="card.html">Ссылка</a></div>
+          </div>
+        </article>
+        <article class="product-card">
+          <a href="card.html"><img class="product-card__image" src="img/product-7.png" alt="Свитшот TOUCH"></a>
+          <div class="product-card__body">
+            <h2>Контрастный свитшот</h2>
+            <p>Собранный силуэт для прохладного города.</p>
+            <div class="product-card__bottom"><span class="product-card__price">22 000 ₽</span><a class="product-card__link" href="card.html">Ссылка</a></div>
+          </div>
+        </article>
+        <article class="product-card">
+          <a href="card.html"><img class="product-card__image" src="img/product-8.png" alt="Белый свитшот TOUCH"></a>
+          <div class="product-card__body">
+            <h2>Белый свитшот</h2>
+            <p>Мягкий слой и свежий светлый оттенок.</p>
+            <div class="product-card__bottom"><span class="product-card__price">2 500 ₽</span><a class="product-card__link" href="card.html">Ссылка</a></div>
+          </div>
+        </article>
+      </section>
+
+      <a class="more-link" href="catalog.html">Больше</a>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="cart-note">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img class="footer-logo" src="img/logo-touch.png" alt="TOUCH">
+      </div>
+      <div>
+        <p class="footer-label">Telegram</p>
+        <p><a href="">@touch_brand</a></p>
+      </div>
+      <div>
+        <p class="footer-label">Написать</p>
+        <p><a href="">hello@touch-brand.ru</a><br><a href="">+7 999 999 99 99</a></p>
+      </div>
+      <div>
+        <p class="footer-label">Шоурум</p>
+        <address>Москва<br>ул. Большая Дмитровка, 12</address>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 TOUCH. Все права защищены.</div>
+  </footer>
+</body>
+</html>
