@@ -21,7 +21,6 @@
 
 - HTML5, семантическая разметка (header, nav, main, section, article, footer)
 - CSS3: переменные (`:root`), Flexbox, Grid, БЭМ, три брейкпоинта (1024+, 768–1023, 320–767)
-- JavaScript без библиотек: мобильное меню, фильтры каталога, галерея, проверка форм, счётчик корзины (localStorage)
 - Шрифты: Inter и Zalando Sans Expanded (Google Fonts)
 
 ## Структура
@@ -30,7 +29,6 @@
 index.html, catalog.html, product.html, contacts.html, login.html
 favicon.svg
 css/style.css
-js/main.js
 img/            логотипы, hero, плитки, products/, gallery/
 ```
 
