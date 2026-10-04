@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TOUCH — молодой немецкий бренд одежды и аксессуаров</title>
+  <meta name="description" content="Молодой немецкий бренд одежды и аксессуаров TOUCH. Коллекция 2026: худи, свитшоты, брюки, сумки и кепки, вдохновлённые художниками XX века.">
+  <meta name="theme-color" content="#2F4538">
+  <meta property="og:title" content="TOUCH — молодой немецкий бренд одежды и аксессуаров">
+  <meta property="og:description" content="Молодой немецкий бренд одежды и аксессуаров TOUCH. Коллекция 2026: худи, свитшоты, брюки, сумки и кепки, вдохновлённые художниками XX века.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Zalando+Sans+Expanded:wght@500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержимому</a>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="icon-cart" viewBox="0 0 24 24"><path d="M2.5 3.5h2.3l2.5 11.7a1 1 0 0 0 1 .8h9.1a1 1 0 0 0 1-.8L20.5 7H6"/><circle cx="9.5" cy="19.5" r="1.4"/><circle cx="17" cy="19.5" r="1.4"/></symbol>
+  <symbol id="icon-heart" viewBox="0 0 24 24"><path d="M12 20.5s-7.8-4.7-9.4-9.6C1.5 7.4 3.5 4.2 7 4.2c2 0 3.4 1 5 3 1.6-2 3-3 5-3 3.5 0 5.5 3.2 4.4 6.7-1.6 4.9-9.4 9.6-9.4 9.6z"/></symbol>
+  <symbol id="icon-user" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><circle cx="12" cy="9.8" r="3.2"/><path d="M5.8 18.8c1.3-2.4 3.5-3.6 6.2-3.6s4.9 1.2 6.2 3.6"/></symbol>
+  <symbol id="icon-telegram" viewBox="0 0 24 24"><path d="M21.5 3 2.5 10.6l6.5 2.4L11.5 20.5l3-4.5 4.8 3.5L21.5 3z"/><path d="M9 13 21.5 3"/></symbol>
+  <symbol id="icon-prev" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="icon-next" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+</svg>
+  <header class="header">
+    <div class="header__inner">
+      <a class="header__logo" href="index.html" aria-label="TOUCH — на главную">
+        <img class="header__logo-img" src="img/logo-white.png" alt="TOUCH" width="982" height="204">
+      </a>
+      <nav class="header__nav" id="site-nav" aria-label="Основная навигация">
+        <ul class="header__menu">
+        <li><a class="header__link" href="index.html" aria-current="page">Главная</a></li>
+        <li><a class="header__link" href="catalog.html">Каталог</a></li>
+        <li><a class="header__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <button class="header__icon-btn" type="button" data-cart-open aria-label="Корзина, товаров: 0">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-cart"></use></svg>
+          <span class="header__badge" data-cart-badge hidden>0</span>
+        </button>
+        <button class="header__icon-btn header__icon-btn--wishlist" type="button" data-toast="Избранное появится в следующей версии сайта." aria-label="Избранное">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-heart"></use></svg>
+        </button>
+        <a class="header__icon-btn" href="login.html" aria-label="Войти в личный кабинет">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-user"></use></svg>
+        </a>
+        <button class="header__icon-btn header__burger" type="button" data-burger aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero__image" src="img/hero-street.jpg" alt="Мощёная улица старого немецкого города после дождя, кафе с синими стульями" width="1920" height="1183" fetchpriority="high">
+      <div class="hero__content">
+        <h1 class="hero__title" id="hero-title" lang="de">Jemanden tief berühren</h1>
+        <p class="hero__subtitle">Тронуть по-настоящему. Одежда и аксессуары коллекции 2026 уже в каталоге.</p>
+        <a class="btn btn--secondary btn--large" href="catalog.html">Смотреть каталог</a>
+      </div>
+    </section>
+
+    <section class="tiles" aria-labelledby="tiles-title">
+      <div class="container">
+        <h2 class="visually-hidden" id="tiles-title">Категории</h2>
+        <div class="tiles__grid">
+          <a class="tile tile--large" href="catalog.html?cat=new">
+            <img class="tile__img" src="img/tile-new.jpg" alt="Девушка в объёмном синем худи с нашивками-значками" width="1093" height="1500" loading="lazy" decoding="async">
+            <span class="tile__label">Новинки 2026</span>
+          </a>
+          <a class="tile tile--wide tile--cutout" href="catalog.html?cat=bags">
+            <img class="tile__img" src="img/tile-bags.jpg" alt="Холщовая сумка в красно-белую полоску" width="716" height="948" loading="lazy" decoding="async">
+            <span class="tile__label">Сумки</span>
+          </a>
+          <a class="tile tile--cutout" href="catalog.html?cat=hoodies">
+            <img class="tile__img" src="img/tile-hoodies.jpg" alt="Синее худи с нашивками" width="1093" height="1500" loading="lazy" decoding="async">
+            <span class="tile__label">Толстовки</span>
+          </a>
+          <a class="tile tile--cutout" href="catalog.html?cat=trousers">
+            <img class="tile__img" src="img/tile-trousers.jpg" alt="Светлые свободные брюки" width="716" height="948" loading="lazy" decoding="async">
+            <span class="tile__label">Брюки</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="brand" aria-labelledby="brand-title">
+      <img class="brand__image" src="img/brand-scarf.jpg" alt="Женщина в светлом платке и тёмных очках за стеклом старого автомобиля" width="1920" height="1364" loading="lazy" decoding="async">
+      <div class="brand__content">
+        <h2 class="visually-hidden" id="brand-title">О бренде</h2>
+        <img class="brand__logo" src="img/logo-white.png" alt="TOUCH" width="982" height="204">
+        <p class="brand__text">Молодой немецкий бренд, отсылающий названием к объединению художников XX века. Воплощаем задумки любой сложности и создаём колоритный продукт мирового уровня.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a class="footer__social" href="https://t.me/touch_support" aria-label="TOUCH в Telegram">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-telegram"></use></svg>
+        </a>
+        <p class="footer__copy">&copy; 2026 TOUCH</p>
+      </div>
+      <address class="footer__contacts">
+        <a class="footer__link" href="mailto:support@touch.ru">support@touch.ru</a>
+        <a class="footer__link" href="tel:+78005553535">8 (800) 555-35-35</a>
+        <span>Берлин, Kantstra&szlig;e 12</span>
+      </address>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>

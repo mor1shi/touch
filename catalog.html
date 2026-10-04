@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог — TOUCH</title>
+  <meta name="description" content="Каталог TOUCH: худи, свитшоты, брюки, футболки, сумки и кепки. Фильтры по цене, цвету, полу и сезону.">
+  <meta name="theme-color" content="#2F4538">
+  <meta property="og:title" content="Каталог — TOUCH">
+  <meta property="og:description" content="Каталог TOUCH: худи, свитшоты, брюки, футболки, сумки и кепки. Фильтры по цене, цвету, полу и сезону.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Zalando+Sans+Expanded:wght@500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержимому</a>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="icon-cart" viewBox="0 0 24 24"><path d="M2.5 3.5h2.3l2.5 11.7a1 1 0 0 0 1 .8h9.1a1 1 0 0 0 1-.8L20.5 7H6"/><circle cx="9.5" cy="19.5" r="1.4"/><circle cx="17" cy="19.5" r="1.4"/></symbol>
+  <symbol id="icon-heart" viewBox="0 0 24 24"><path d="M12 20.5s-7.8-4.7-9.4-9.6C1.5 7.4 3.5 4.2 7 4.2c2 0 3.4 1 5 3 1.6-2 3-3 5-3 3.5 0 5.5 3.2 4.4 6.7-1.6 4.9-9.4 9.6-9.4 9.6z"/></symbol>
+  <symbol id="icon-user" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><circle cx="12" cy="9.8" r="3.2"/><path d="M5.8 18.8c1.3-2.4 3.5-3.6 6.2-3.6s4.9 1.2 6.2 3.6"/></symbol>
+  <symbol id="icon-telegram" viewBox="0 0 24 24"><path d="M21.5 3 2.5 10.6l6.5 2.4L11.5 20.5l3-4.5 4.8 3.5L21.5 3z"/><path d="M9 13 21.5 3"/></symbol>
+  <symbol id="icon-prev" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="icon-next" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+</svg>
+  <header class="header">
+    <div class="header__inner">
+      <a class="header__logo" href="index.html" aria-label="TOUCH — на главную">
+        <img class="header__logo-img" src="img/logo-white.png" alt="TOUCH" width="982" height="204">
+      </a>
+      <nav class="header__nav" id="site-nav" aria-label="Основная навигация">
+        <ul class="header__menu">
+        <li><a class="header__link" href="index.html">Главная</a></li>
+        <li><a class="header__link" href="catalog.html" aria-current="page">Каталог</a></li>
+        <li><a class="header__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <button class="header__icon-btn" type="button" data-cart-open aria-label="Корзина, товаров: 0">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-cart"></use></svg>
+          <span class="header__badge" data-cart-badge hidden>0</span>
+        </button>
+        <button class="header__icon-btn header__icon-btn--wishlist" type="button" data-toast="Избранное появится в следующей версии сайта." aria-label="Избранное">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-heart"></use></svg>
+        </button>
+        <a class="header__icon-btn" href="login.html" aria-label="Войти в личный кабинет">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-user"></use></svg>
+        </a>
+        <button class="header__icon-btn header__burger" type="button" data-burger aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="catalog container">
+      <h1 class="page-title">Каталог</h1>
+
+      <form class="catalog__filters" data-filters role="search" aria-label="Поиск и фильтры">
+        <label class="catalog__filter">Поиск
+          <input class="field__control field__control--pill catalog__search" type="search" name="q" placeholder="Худи, сумка, брюки…">
+        </label>
+        <label class="catalog__filter">Цена
+          <select class="catalog__select" name="price">
+            <option value="default">Рекомендуемые</option>
+            <option value="asc">Сначала дешёвые</option>
+            <option value="desc">Сначала дорогие</option>
+          </select>
+        </label>
+        <label class="catalog__filter">Цвет
+          <select class="catalog__select" name="color">
+            <option value="all">Все цвета</option>
+            <option value="blue">Синий</option>
+            <option value="yellow">Жёлтый</option>
+            <option value="green">Зелёный</option>
+            <option value="beige">Бежевый</option>
+            <option value="red">Красный</option>
+            <option value="black">Чёрный</option>
+            <option value="gray">Серый</option>
+            <option value="burgundy">Бордовый</option>
+          </select>
+        </label>
+        <label class="catalog__filter">Пол
+          <select class="catalog__select" name="gender">
+            <option value="any">Любой</option>
+            <option value="women">Женский</option>
+            <option value="men">Мужской</option>
+          </select>
+        </label>
+        <label class="catalog__filter">Сезон
+          <select class="catalog__select" name="season">
+            <option value="any">Любой</option>
+            <option value="ss">Весна — лето</option>
+            <option value="aw">Осень — зима</option>
+          </select>
+        </label>
+        <button class="btn btn--primary btn--small" type="submit">Применить</button>
+        <button class="btn btn--text btn--small" type="reset">Сбросить</button>
+      </form>
+
+      <h2 class="section-title">Товары</h2>
+      <p class="catalog__status" data-catalog-status role="status" aria-live="polite"></p>
+
+      <ul class="catalog__grid" data-catalog-grid>
+          <li class="catalog__item" data-title="Худи Siniy Vsadnik Patched Sapphire Hoodie Royal Navy" data-keywords="худи толстовка капюшон синий" data-price="25990" data-color="blue" data-gender="unisex" data-season="aw" data-tags="new hoodies">
+            <article class="card">
+              <div class="card__media">
+                <img class="card__img" src="img/products/p1-siniy-vsadnik.jpg" alt="Синее объёмное худи с нашивками-значками" width="1093" height="1500" loading="lazy" decoding="async">
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Худи Siniy Vsadnik Patched Sapphire Hoodie Royal Navy</h3>
+                <p class="card__text">Объёмное худи королевского синего цвета с нашивками-значками и эффектом потёртой краски.</p>
+                <div class="card__footer">
+                  <a class="card__link" href="product.html">Подробнее<span class="visually-hidden">: Худи Siniy Vsadnik Patched Sapphire Hoodie Royal Navy</span></a>
+                  <span class="card__price">25&nbsp;990&nbsp;₽</span>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="catalog__item" data-title="Худи Klee Pale Yellow Heavyweight Hoodie" data-keywords="худи толстовка капюшон жёлтый" data-price="14990" data-color="yellow" data-gender="unisex" data-season="aw" data-tags="hoodies">
+            <article class="card">
+              <div class="card__media">
+                <img class="card__img" src="img/products/p2-klee-hoodie.jpg" alt="Светло-жёлтое худи прямого кроя" width="1000" height="1000" loading="lazy" decoding="async">
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Худи Klee Pale Yellow Heavyweight Hoodie</h3>
+                <p class="card__text">Плотный футер светло-жёлтого цвета, прямой силуэт и глубокий капюшон на шнурках.</p>
+                <div class="card__footer">
+                  <a class="card__link" href="product.html">Подробнее<span class="visually-hidden">: Худи Klee Pale Yellow Heavyweight Hoodie</span></a>
+                  <span class="card__price">14&nbsp;990&nbsp;₽</span>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="catalog__item" data-title="Свитшот Münter Garden Crewneck Forest" data-keywords="свитшот толстовка зелёный" data-price="11990" data-color="green" data-gender="unisex" data-season="aw" data-tags="new hoodies">
+            <article class="card">
+              <div class="card__media">
+                <img class="card__img" src="img/products/p3-muenter-sweatshirt.jpg" alt="Тёмно-зелёный свитшот с круглым принтом" width="564" height="705" loading="lazy" decoding="async">
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Свитшот Münter Garden Crewneck Forest</h3>
+                <p class="card__text">Свитшот глубокого лесного оттенка с мягким начёсом внутри и ребристым воротом.</p>
+                <div class="card__footer">
+                  <a class="card__link" href="product.html">Подробнее<span class="visually-hidden">: Свитшот Münter Garden Crewneck Forest</span></a>
+                  <span class="card__price">11&nbsp;990&nbsp;₽</span>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="catalog__item" data-title="Брюки Macke Wide Sand Trousers" data-keywords="брюки штаны песочный бежевый" data-price="13990" data-color="beige" data-gender="women" data-season="all" data-tags="new trousers">
+            <article class="card">
+              <div class="card__media">
+                <img class="card__img" src="img/products/p4-macke-trousers.jpg" alt="Широкие брюки песочного цвета" width="1100" height="1467" loading="lazy" decoding="async">
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Брюки Macke Wide Sand Trousers</h3>
+                <p class="card__text">Широкие брюки песочного цвета из хлопкового твила на поясе с кулиской.</p>
+                <div class="card__footer">
+                  <a class="card__link" href="product.html">Подробнее<span class="visually-hidden">: Брюки Macke Wide Sand Trousers</span></a>
+                  <span class="card__price">13&nbsp;990&nbsp;₽</span>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="catalog__item" data-title="Сумка Marc Striped Canvas Tote" data-keywords="сумка шоппер холщовая красный" data-price="8990" data-color="red" data-gender="women" data-season="ss" data-tags="new bags">
+            <article class="card">
+              <div class="card__media">
+                <img class="card__img" src="img/products/p5-marc-tote.jpg" alt="Холщовая сумка-шоппер в красно-белую полоску" width="1080" height="1280" loading="lazy" decoding="async">
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Сумка Marc Striped Canvas Tote</h3>
+                <p class="card__text">Вместительный холщовый шоппер в красно-белую полоску с карманом на молнии.</p>
+                <div class="card__footer">
+                  <a class="card__link" href="product.html">Подробнее<span class="visually-hidden">: Сумка Marc Striped Canvas Tote</span></a>
+                  <span class="card__price">8&nbsp;990&nbsp;₽</span>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="catalog__item" data-title="Футболка Kandinsky Circle Print Tee Black" data-keywords="футболка майка чёрный принт" data-price="5990" data-color="black" data-gender="unisex" data-season="ss" data-tags="tees">
+            <article class="card">
+              <div class="card__media">
+                <img class="card__img" src="img/products/p6-kandinsky-tee.jpg" alt="Чёрная футболка с абстрактным принтом из кругов" width="944" height="960" loading="lazy" decoding="async">
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Футболка Kandinsky Circle Print Tee Black</h3>
+                <p class="card__text">Чёрная футболка свободного кроя с принтом из пересекающихся кругов и линий.</p>
+                <div class="card__footer">
+                  <a class="card__link" href="product.html">Подробнее<span class="visually-hidden">: Футболка Kandinsky Circle Print Tee Black</span></a>
+                  <span class="card__price">5&nbsp;990&nbsp;₽</span>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="catalog__item" data-title="Рюкзак Werefkin Daypack Graphite" data-keywords="рюкзак сумка серый графитовый" data-price="12990" data-color="gray" data-gender="unisex" data-season="all" data-tags="bags">
+            <article class="card">
+              <div class="card__media">
+                <img class="card__img" src="img/products/p7-werefkin-backpack.jpg" alt="Серый городской рюкзак" width="900" height="900" loading="lazy" decoding="async">
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Рюкзак Werefkin Daypack Graphite</h3>
+                <p class="card__text">Городской рюкзак на 18 литров графитового цвета с отделением для ноутбука 15 дюймов.</p>
+                <div class="card__footer">
+                  <a class="card__link" href="product.html">Подробнее<span class="visually-hidden">: Рюкзак Werefkin Daypack Graphite</span></a>
+                  <span class="card__price">12&nbsp;990&nbsp;₽</span>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="catalog__item" data-title="Кепка Jawlensky Five-Panel Cap Burgundy" data-keywords="кепка бейсболка бордовый" data-price="3990" data-color="burgundy" data-gender="unisex" data-season="ss" data-tags="caps">
+            <article class="card">
+              <div class="card__media">
+                <img class="card__img" src="img/products/p8-jawlensky-cap.jpg" alt="Бордовая пятипанельная кепка" width="900" height="900" loading="lazy" decoding="async">
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Кепка Jawlensky Five-Panel Cap Burgundy</h3>
+                <p class="card__text">Пятипанельная кепка бордового цвета из хлопкового твила с регулируемой пряжкой.</p>
+                <div class="card__footer">
+                  <a class="card__link" href="product.html">Подробнее<span class="visually-hidden">: Кепка Jawlensky Five-Panel Cap Burgundy</span></a>
+                  <span class="card__price">3&nbsp;990&nbsp;₽</span>
+                </div>
+              </div>
+            </article>
+          </li>
+      </ul>
+      <p class="catalog__empty" data-catalog-empty hidden>Ничего не найдено. Измените запрос или сбросьте фильтры.</p>
+
+      <div class="catalog__more">
+        <button class="btn btn--text btn--small" type="button" data-catalog-more>Показать ещё</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a class="footer__social" href="https://t.me/touch_support" aria-label="TOUCH в Telegram">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-telegram"></use></svg>
+        </a>
+        <p class="footer__copy">&copy; 2026 TOUCH</p>
+      </div>
+      <address class="footer__contacts">
+        <a class="footer__link" href="mailto:support@touch.ru">support@touch.ru</a>
+        <a class="footer__link" href="tel:+78005553535">8 (800) 555-35-35</a>
+        <span>Берлин, Kantstra&szlig;e 12</span>
+      </address>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>

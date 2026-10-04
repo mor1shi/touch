@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход — TOUCH</title>
+  <meta name="description" content="Вход в личный кабинет TOUCH или продолжение как гость.">
+  <meta name="theme-color" content="#2F4538">
+  <meta property="og:title" content="Вход — TOUCH">
+  <meta property="og:description" content="Вход в личный кабинет TOUCH или продолжение как гость.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Zalando+Sans+Expanded:wght@500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержимому</a>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="icon-cart" viewBox="0 0 24 24"><path d="M2.5 3.5h2.3l2.5 11.7a1 1 0 0 0 1 .8h9.1a1 1 0 0 0 1-.8L20.5 7H6"/><circle cx="9.5" cy="19.5" r="1.4"/><circle cx="17" cy="19.5" r="1.4"/></symbol>
+  <symbol id="icon-heart" viewBox="0 0 24 24"><path d="M12 20.5s-7.8-4.7-9.4-9.6C1.5 7.4 3.5 4.2 7 4.2c2 0 3.4 1 5 3 1.6-2 3-3 5-3 3.5 0 5.5 3.2 4.4 6.7-1.6 4.9-9.4 9.6-9.4 9.6z"/></symbol>
+  <symbol id="icon-user" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><circle cx="12" cy="9.8" r="3.2"/><path d="M5.8 18.8c1.3-2.4 3.5-3.6 6.2-3.6s4.9 1.2 6.2 3.6"/></symbol>
+  <symbol id="icon-telegram" viewBox="0 0 24 24"><path d="M21.5 3 2.5 10.6l6.5 2.4L11.5 20.5l3-4.5 4.8 3.5L21.5 3z"/><path d="M9 13 21.5 3"/></symbol>
+  <symbol id="icon-prev" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="icon-next" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+</svg>
+  <header class="header">
+    <div class="header__inner">
+      <a class="header__logo" href="index.html" aria-label="TOUCH — на главную">
+        <img class="header__logo-img" src="img/logo-white.png" alt="TOUCH" width="982" height="204">
+      </a>
+      <nav class="header__nav" id="site-nav" aria-label="Основная навигация">
+        <ul class="header__menu">
+        <li><a class="header__link" href="index.html">Главная</a></li>
+        <li><a class="header__link" href="catalog.html">Каталог</a></li>
+        <li><a class="header__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <button class="header__icon-btn" type="button" data-cart-open aria-label="Корзина, товаров: 0">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-cart"></use></svg>
+          <span class="header__badge" data-cart-badge hidden>0</span>
+        </button>
+        <button class="header__icon-btn header__icon-btn--wishlist" type="button" data-toast="Избранное появится в следующей версии сайта." aria-label="Избранное">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-heart"></use></svg>
+        </button>
+        <a class="header__icon-btn" href="login.html" aria-label="Войти в личный кабинет" aria-current="page">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-user"></use></svg>
+        </a>
+        <button class="header__icon-btn header__burger" type="button" data-burger aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="login container">
+      <div class="login__box">
+        <img class="login__logo" src="img/logo-black.png" alt="TOUCH" width="982" height="204">
+        <h1 class="visually-hidden">Вход в личный кабинет</h1>
+        <form class="login__form" data-form data-success="Вход выполнен в демонстрационном режиме. Переходим в каталог." data-redirect="catalog.html" novalidate>
+          <div class="field">
+            <label class="field__label" for="login-name">Логин или почта</label>
+            <input class="field__control" id="login-name" name="login" type="text" autocomplete="username"
+                   data-validate="required" data-msg-required="Введите логин или почту" aria-describedby="login-name-error" aria-invalid="false">
+            <p class="field__error" id="login-name-error" hidden></p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="login-password">Пароль</label>
+            <input class="field__control" id="login-password" name="password" type="password" autocomplete="current-password"
+                   data-validate="required" data-msg-required="Введите пароль" aria-describedby="login-password-error" aria-invalid="false">
+            <p class="field__error" id="login-password-error" hidden></p>
+          </div>
+          <div class="login__actions">
+            <button class="btn btn--primary" type="submit">Войти</button>
+            <a class="btn btn--secondary" href="catalog.html">Войти как гость</a>
+            <button class="btn btn--text" type="button" data-toast="Регистрация появится в следующей версии сайта.">Регистрация</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a class="footer__social" href="https://t.me/touch_support" aria-label="TOUCH в Telegram">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-telegram"></use></svg>
+        </a>
+        <p class="footer__copy">&copy; 2026 TOUCH</p>
+      </div>
+      <address class="footer__contacts">
+        <a class="footer__link" href="mailto:support@touch.ru">support@touch.ru</a>
+        <a class="footer__link" href="tel:+78005553535">8 (800) 555-35-35</a>
+        <span>Берлин, Kantstra&szlig;e 12</span>
+      </address>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>
